@@ -105,7 +105,8 @@ function pmprowoo_purchase_disabled() {
     <div class="woocommerce">
         <div class="woocommerce-info wc-nonpurchasable-message">
 			<?php printf(
-				__( "You may only add one membership to your %scart%s.", 'pmpro-woocommerce' ),
+				//__( "You may only add one membership to your %scart%s.", 'pmpro-woocommerce' ),
+				__( "Solo puede agregar una membresía a su carrito.", 'pmpro-woocommerce' ),
 				sprintf( '<a href="%1$s" title="%2$s">', $cart_url, __( 'Cart', 'pmpro-woocommerce' ) ),
 				'</a>'
 			);

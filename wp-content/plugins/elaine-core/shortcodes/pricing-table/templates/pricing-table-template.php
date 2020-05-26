@@ -3,11 +3,11 @@
 		<ul>
 		    <li style="padding: 30px; margin-bottom: -50px;">
 		        <?php if (esc_html($title) == 'LALABAG') { ?>
-						<img src="http://test-mauro.site/wp-content/uploads/2020/04/membresia-lalabag-basico.png" alt="" />
+						<img src="https://lalabag.co/wp-content/uploads/2020/04/membresia-lalabag-basico.png" alt="" />
 				<?php } else if (esc_html($title) == 'LALABAG PRO') { ?>
-						<img src="http://test-mauro.site/wp-content/uploads/2020/04/membrasia-lalabag-pro.png" alt="" />
+						<img src="https://lalabag.co/wp-content/uploads/2020/04/membrasia-lalabag-pro.png" alt="" />
 				<?php } else { ?>
-						<img src="http://test-mauro.site/wp-content/uploads/2020/04/Copia-de-LALAENERO22ddddhDd-1-600x600.png" alt="" />
+						<img src="https://lalabag.co/wp-content/uploads/2020/04/Copia-de-LALAENERO22ddddhDd-1-600x600.png" alt="" />
 				<?php } ?>
 			</li>
 			<li class="edgtf-pt-title-holder">
