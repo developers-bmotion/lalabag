@@ -3,11 +3,13 @@
 		<ul>
 		    <li style="padding: 30px; margin-bottom: -50px;">
 		        <?php if (esc_html($title) == 'LALABAG') { ?>
-						<img src="https://lalabag.co/wp-content/uploads/2020/04/membresia-lalabag-basico.png" alt="" />
-				<?php } else if (esc_html($title) == 'LALABAG PRO') { ?>
-						<img src="https://lalabag.co/wp-content/uploads/2020/04/membrasia-lalabag-pro.png" alt="" />
+						<img src="https://lalabag.co/wp-content/uploads/2020/06/1-503x503-2.png" alt="" />
+				<?php } else if (esc_html($title) == 'LALABAG CO') { ?>
+						<img src="https://lalabag.co/wp-content/uploads/2020/06/4-503x503-2.png" alt="" />
+                                <?php } else if (esc_html($title) == 'LALABAG PRO') { ?>
+						<img src="https://lalabag.co/wp-content/uploads/2020/06/2-503x503-2.png" alt="" />
 				<?php } else { ?>
-						<img src="https://lalabag.co/wp-content/uploads/2020/04/Copia-de-LALAENERO22ddddhDd-1-600x600.png" alt="" />
+						<img src="https://lalabag.co/wp-content/uploads/2020/06/503x503-4.png" alt="" />
 				<?php } ?>
 			</li>
 			<li class="edgtf-pt-title-holder">
@@ -20,7 +22,7 @@
 			<li class="edgtf-pt-content">
 				<?php echo do_shortcode($content); ?>
 			</li>
-			<?php 
+			<?php
 			if(!empty($button_text)) { ?>
 				<li class="edgtf-pt-button">
 					<?php echo elaine_edge_get_button_html(array(
@@ -30,11 +32,11 @@
                         'size' => 'medium',
 						'icon_pack' => "font_elegant",
 						'fe_icon' => "arrow_carrot-right"
-						
+
 					)); ?>
-					
-					
-				</li>				
+
+
+				</li>
 			<?php } ?>
 		</ul>
 	</div>

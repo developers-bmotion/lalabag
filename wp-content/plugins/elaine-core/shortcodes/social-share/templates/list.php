@@ -1,6 +1,6 @@
 <div class="edgtf-social-share-holder edgtf-list">
 	<?php if(!empty($title)) { ?>
-		<p class="edgtf-social-title"><?php echo esc_html($title);?></p>
+		<p class="edgtf-social-title"><?php /*echo esc_html($title);*/ echo "Compartir"; ?></p>
 	<?php } ?>
 	<ul>
 		<?php foreach ($networks as $net) {

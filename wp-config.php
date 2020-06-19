@@ -79,3 +79,8 @@ require_once ABSPATH . 'wp-settings.php';
 
 define('DISALLOW_FILE_EDIT', true);
 define('DISALLOW_FILE_MODS', true);
+
+/**  configuaracion del correo  **/
+
+/*define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', 'your_password' );*/
