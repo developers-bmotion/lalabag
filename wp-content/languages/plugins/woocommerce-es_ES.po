@@ -2,14 +2,17 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-17 07:23:00+0000\n"
+"PO-Revision-Date: 2020-06-19 17:07-0500\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"X-Generator: Poedit 2.3.1\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - WooCommerce - Stable (latest release)\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: packages/woocommerce-admin/dist/app/index.js:27
 msgid "Get in front of new customers on Google and secure $150 in ads credit with Kliken’s integration."
@@ -3075,7 +3078,7 @@ msgstr "Promedio de valor del pedido."
 #: packages/woocommerce-admin/src/API/Reports/Customers/Controller.php:251
 #: packages/woocommerce-admin/src/API/Reports/Taxes/Controller.php:178
 msgid "Country / Region."
-msgstr "País / Región."
+msgstr "País"
 
 #: packages/woocommerce-admin/src/API/Reports/Categories/Controller.php:315
 msgid "Add additional piece of info about each category to the report."
@@ -4671,7 +4674,7 @@ msgstr "País/región de facturación"
 #: packages/woocommerce-admin/src/API/Reports/Customers/Controller.php:582
 #: packages/woocommerce-admin/dist/app/index.js:27
 msgid "Country / Region"
-msgstr "País/Región"
+msgstr "País"
 
 #: packages/woocommerce-blocks/assets/js/components/grid-layout-control/index.js:62
 #: packages/woocommerce-blocks/build/all-products.js:1

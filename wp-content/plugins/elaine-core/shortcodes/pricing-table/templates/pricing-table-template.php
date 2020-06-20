@@ -3,13 +3,13 @@
 		<ul>
 		    <li style="padding: 30px; margin-bottom: -50px;">
 		        <?php if (esc_html($title) == 'LALABAG') { ?>
-						<img src="https://lalabag.co/wp-content/uploads/2020/06/1-503x503-2.png" alt="" />
+						<img src="/wp-content/uploads/2020/06/1-503x503-2.png" alt="" />
 				<?php } else if (esc_html($title) == 'LALABAG CO') { ?>
-						<img src="https://lalabag.co/wp-content/uploads/2020/06/4-503x503-2.png" alt="" />
+						<img src="/wp-content/uploads/2020/06/4-503x503-2.png" alt="" />
                                 <?php } else if (esc_html($title) == 'LALABAG PRO') { ?>
-						<img src="https://lalabag.co/wp-content/uploads/2020/06/2-503x503-2.png" alt="" />
+						<img src="/wp-content/uploads/2020/06/2-503x503-2.png" alt="" />
 				<?php } else { ?>
-						<img src="https://lalabag.co/wp-content/uploads/2020/06/503x503-4.png" alt="" />
+						<img src="/wp-content/uploads/2020/06/503x503-4.png" alt="" />
 				<?php } ?>
 			</li>
 			<li class="edgtf-pt-title-holder">
