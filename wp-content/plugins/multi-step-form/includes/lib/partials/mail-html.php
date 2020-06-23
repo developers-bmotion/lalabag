@@ -45,7 +45,7 @@
 							<table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="responsive-table">
 								<tbody><tr>
 									<td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#666666;">
-										<span class="appleFooter" style="color:#666666;">Multi Step Form | powered by <a href="http://mondula.com">Mondula GmbH</a> <?php echo date("Y"); ?></span>
+										<span class="appleFooter" style="color:#666666;"><a href="https://lalabag.com">Lalabag.com</a> | Powered by <a href="https://bmotion.co">Bmotion SAS</a> <?php echo date("Y"); ?></span>
 									</td>
 								</tr>
 							</tbody></table>
