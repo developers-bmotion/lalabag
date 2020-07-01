@@ -1,0 +1,25 @@
+2020-06-30T16:53:22+00:00 CRITICAL Uncaught Error: Call to a member function get_status() on null in /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php:675
+Stack trace:
+#0 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(287): WC_ePayco->ePayco_successful_request()
+#1 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters()
+#2 /home/forge/lalabag.com/wp-includes/plugin.php(478): WP_Hook->do_action()
+#3 /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php(619): do_action()
+#4 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(287): WC_ePayco->check_ePayco_response()
+#5 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters()
+#6 /home/forge/lalabag.com/wp-includes/plugin.php(478): WP_Hook->do_action()
+#7 /home/forge/lalabag.com/wp-content/plugins/woocommerce/includes/class-wc-api.php(148): do_action()
+#8 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(287): WC_API->handle_ en /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php en la línea 675
+
+2020-06-30T21:57:02+00:00 CRITICAL Uncaught Error: Class 'WACVP\Inc\Email\Email_Templates' not found in /home/forge/lalabag.com/wp-content/plugins/woocommerce-abandoned-cart-recovery/includes/define.php:75
+Stack trace:
+#0 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(287): WACVP\Inc\init()
+#1 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters()
+#2 /home/forge/lalabag.com/wp-includes/plugin.php(478): WP_Hook->do_action()
+#3 /home/forge/lalabag.com/wp-settings.php(403): do_action()
+#4 /home/forge/lalabag.com/wp-config.php(67): require_once('/home/forge/lal...')
+#5 /home/forge/lalabag.com/wp-load.php(37): require_once('/home/forge/lal...')
+#6 /home/forge/lalabag.com/wp-blog-header.php(13): require_once('/home/forge/lal...')
+#7 /home/forge/lalabag.com/index.php(17): require('/home/forge/lal...')
+#8 {main}
+  thrown en /home/forge/lalabag.com/wp-content/plugins/woocommerce-abandoned-cart-recovery/includes/define.php en la línea 75
+
