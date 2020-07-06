@@ -5,11 +5,12 @@
 		        <?php if (esc_html($title) == 'LALABAG') { ?>
 						<img src="/wp-content/uploads/2020/06/1-503x503-2.png" alt="" />
 				<?php } else if (esc_html($title) == 'LALABAG CO') { ?>
-						<img src="/wp-content/uploads/2020/06/4-503x503-2.png" alt="" />
+						<img src="/wp-content/uploads/2020/06/WhatsApp-Image-2020-07-01-at-6.27.32-PM.jpeg" alt="" />
                                 <?php } else if (esc_html($title) == 'LALABAG PRO') { ?>
 						<img src="/wp-content/uploads/2020/06/2-503x503-2.png" alt="" />
 				<?php } else { ?>
 						<img src="/wp-content/uploads/2020/06/503x503-4.png" alt="" />
+
 				<?php } ?>
 			</li>
 			<li class="edgtf-pt-title-holder">

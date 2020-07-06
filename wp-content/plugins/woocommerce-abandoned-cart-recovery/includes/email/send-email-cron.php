@@ -130,9 +130,9 @@ class Send_Email_Cron {
 							$pd_img,
 							$pd_name . ' x ' . $qty,
 							$description,
-							__( 'Price:', 'woo-abandoned-cart-recovery' ) . ' ' . wc_price( $amount ),
+							__( 'Precio:', 'woo-abandoned-cart-recovery' ) . ' ' . wc_price( $amount ),
 							"<a href='$pd_url' style='font-weight: inherit; color:inherit;'>$pd_name</a>",
-							__( 'Quantity:', 'woo-abandoned-cart-recovery' ) . ' ' . $qty
+							__( 'Cantidad:', 'woo-abandoned-cart-recovery' ) . ' ' . $qty
 						);
 					}
 				}
@@ -576,9 +576,9 @@ class Send_Email_Cron {
 						$pd_img,
 						$item['name'] . ' x ' . $item['quantity'],
 						$desc,
-						__( 'Price:', 'woo-abandoned-cart-recovery' ) . wc_price( $item['subtotal'] ),
+						__( 'Precio:', 'woo-abandoned-cart-recovery' ) . wc_price( $item['subtotal'] ),
 						"<a href='$p_url' style='font-weight: inherit'>${item['name']}</a>",
-						__( 'Quantity:', 'woo-abandoned-cart-recovery' ) . $item['quantity'],
+						__( 'Cantidad:', 'woo-abandoned-cart-recovery' ) . $item['quantity'],
 					);
 					$search  = array(
 						'{wacv_image_product}',
