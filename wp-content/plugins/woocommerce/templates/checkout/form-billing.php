@@ -50,8 +50,10 @@ defined( 'ABSPATH' ) || exit;
 
 			<p class="form-row form-row-wide create-account">
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+					<!-- <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" < ?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true ); ?> type="checkbox" name="createaccount" value="1" /> <span>< ?php esc_html_e( 'Create an account?', 'woocommerce' ); ?></span> -->
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true ); ?> type="checkbox" name="createaccount" value="1" /> <span><?php esc_html_e( 'Create an account?', 'woocommerce' ); ?></span>
 				</label>
+				<label id="create-account-descripcion"> La creación de la cuenta es necesaria para poder ver más detalles de tu suscripción. </label>
 			</p>
 
 		<?php endif; ?>
