@@ -19,9 +19,12 @@ defined( 'ABSPATH' ) || exit;
 
 if ( $cross_sells ) : ?>
 
-	<div class="cross-sells">
+	<!-- <div class="cross-sells"> -->
+	<div id="ventas-cruzadas" class="cross-sells">
 
-		<h2><?php esc_html_e( 'You may be interested in&hellip;', 'woocommerce' ); ?></h2>
+
+		<!-- <h2>< ?php esc_html_e( 'You may be interested in&hellip;', 'woocommerce' ); ?></h2> -->
+		<h2><?php esc_html_e( 'Con tu suscripción puedes incluir&hellip;' ); ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
 
