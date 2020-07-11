@@ -26,21 +26,22 @@ if ( $cross_sells ) : ?>
 		<!-- <h2>< ?php esc_html_e( 'You may be interested in&hellip;', 'woocommerce' ); ?></h2> -->
 		<h2><?php esc_html_e( 'Con tu suscripción puedes incluir&hellip;' ); ?></h2>
 
-		<?php woocommerce_product_loop_start(); ?>
+		<?php echo do_shortcode( '[yith_wc_productslider id=6322]' ); ?>
+		
+		<!--< ?php woocommerce_product_loop_start(); ?>
 
-			<?php foreach ( $cross_sells as $cross_sell ) : ?>
+			< ?php foreach ( $cross_sells as $cross_sell ) : ?>
 
-				<?php
+				< ?php
 					$post_object = get_post( $cross_sell->get_id() );
-
 					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
 					wc_get_template_part( 'content', 'product' );
 				?>
 
-			<?php endforeach; ?>
+			< ?php endforeach; ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+		< ?php woocommerce_product_loop_end(); ?> -->
 
 	</div>
 	<?php

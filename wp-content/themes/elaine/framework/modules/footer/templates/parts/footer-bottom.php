@@ -1,6 +1,9 @@
-<div class="edgtf-footer-bottom-holder">
+<div id="edgtf-footer-bottom-holder" class="edgtf-footer-bottom-holder">
     <div class="edgtf-footer-bottom-inner <?php echo esc_attr($footer_bottom_grid_class); ?>">
         <div class="edgtf-grid-row <?php echo esc_attr($footer_bottom_classes); ?>">
+<?php   
+        $footer_bottom_columns[1] = 8;
+        $footer_bottom_columns[2] = 0; ?>
             <?php for ($i = 0; $i < sizeof($footer_bottom_columns); $i++) { ?>
                 <div class="edgtf-grid-col-<?php echo esc_attr($footer_bottom_columns[$i]); ?>">
                     <?php
