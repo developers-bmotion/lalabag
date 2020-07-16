@@ -384,6 +384,21 @@ class Send_SMS_Cron {
 	}
 
 	public function send_sms_by_twilio( $phone, $message, $type, $acr_id, $sent_email_id ) {
+		$sms_custom = $this->sms_test( $this->data['sms_app_id'], $this->data['sms_app_secret'], $this->data['from_phone'] , $phone, $message, true);
+
+		$result = false;
+		if ($sms_custom ) {
+			$this->query->insert_email_history( 'sms_' . $type, $acr_id, $sent_email_id );
+			$result = true;
+		} else {
+			if ( $type == 'order' ) {
+				update_post_meta( $acr_id, 'wacv_check_phone_number', 'NG' );
+			} elseif ( $type == 'cart' ) {
+				$this->query->update_abd_cart_record( array( 'valid_phone' => 1 ), array( 'id' => $acr_id ) );
+			}
+		}
+
+		/*
 		$result  = false;
 		$url     = "https://api.twilio.com/2010-04-01/Accounts/" . $this->data['sms_app_id'] . "/Messages.json";
 		$data    = array(
@@ -416,6 +431,7 @@ class Send_SMS_Cron {
 				$this->query->update_abd_cart_record( array( 'valid_phone' => 1 ), array( 'id' => $acr_id ) );
 			}
 		}
+		*/
 
 		return $result;
 	}
@@ -494,6 +510,7 @@ class Send_SMS_Cron {
 
 
 	public function twilio_test( $id, $secret, $from, $to ) {
+		return $this->sms_test( $id, $secret, $from, $to );
 		$url     = "https://api.twilio.com/2010-04-01/Accounts/" . $id . "/Messages.json";
 		$data    = array(
 			'From' => $from,
@@ -578,5 +595,83 @@ class Send_SMS_Cron {
 
 		return $result;
 	}
+
+
+	public function sms_test( $id, $secret, $from, $to, $msg = null, $boolean = false ) {
+		return $this->stopSend($boolean);
+		if (!$msg) {
+			$msg = __( 'Hello, this is test sms message from sanchez', 'woo-abandoned-cart-recovery' );
+		}
+
+		$url     = "https://api.labsmobile.com/json/send";
+
+		$data    = $this->getSend($msg, [$to]);
+
+		$headers = array(
+			"Authorization: Basic ".substr($id,3),
+			"Cache-Control: no-cache",
+			"Content-Type: application/json"
+		);
+
+		$curl = curl_init();
+		curl_setopt_array($curl, array(
+			CURLOPT_URL => $url,
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "POST",
+			CURLOPT_POSTFIELDS => $data,
+			CURLOPT_HTTPHEADER => $headers
+		));
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+		curl_close($curl);
+
+		if ($boolean) {
+			return !$err;
+		}
+
+		$response = json_decode($response);
+
+		$message  = !$err ? __( 'Successful.', 'woo-abandoned-cart-recovery' ) : $err;
+
+		$return = array(
+			'code'    => $response->code,
+			'message' => $message
+		);
+
+		return $return;
+	}
+
+	public function stopSend($boolean) {
+		if ($boolean) {
+			return true;
+		} else {
+			return array(
+				'code'    => 0,
+				'message' => 'si se envia'
+			);
+		}
+	}
+
+	public function  getSend($msg, $numbers){
+        if (isset($numbers[0])) {
+            $recipients = "";
+            foreach ($numbers as  $number) {
+                if ($recipients !== ""){
+                    $recipients .= ",";
+                }
+                $recipients .= '{"msisdn":"'.$number.'"}';
+            }
+
+            $msg = '{"message":"'.$msg.'", "tpoa":"Sender","recipient":['.$recipients.']}';
+
+            return $msg;
+        }
+        return null;
+    }
 
 }

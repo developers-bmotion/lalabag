@@ -1,0 +1,34 @@
+2020-07-14T15:08:48+00:00 CRITICAL Uncaught Exception: $order cannot be null or empty in /home/forge/lalabag.com/wp-content/plugins/includes/validation.php:12
+Stack trace:
+#0 /home/forge/lalabag.com/wp-content/plugins/includes/integrations/interface/Integration.php(12): EC_Validation::checkNullOrEmpty(NULL, '$order')
+#1 /home/forge/lalabag.com/wp-content/plugins/includes/integrations/CustomShortcode.php(14): Integration->__construct(NULL)
+#2 /home/forge/lalabag.com/wp-content/plugins/includes/emailCore.php(60): WMIntegrationCustomShortcode->__construct(NULL)
+#3 /home/forge/lalabag.com/wp-content/plugins/includes/emailCore.php(92): WooMailCore->registerIntegrations(Array)
+#4 /home/forge/lalabag.com/wp-content/plugins/templates/woo-mail-template.php(43): WooMailCore->collectData(Array)
+#5 /home/forge/lalabag.com/wp-content/plugins/woocommerce/includes/wc-core-functions.php(251): include('/home/forge/lal...')
+#6 /home/forge/lalabag.com/wp-content/plugins/woocommerce/includes/wc-core-functions.php(270): wc_get_template('emails/customer...', Array, en /home/forge/lalabag.com/wp-content/plugins/includes/validation.php en la línea 12
+
+2020-07-14T21:55:09+00:00 CRITICAL Uncaught Error: Call to a member function get_status() on null in /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php:675
+Stack trace:
+#0 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(287): WC_ePayco->ePayco_successful_request(NULL)
+#1 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/forge/lalabag.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php(619): do_action('ePayco_init', Array)
+#4 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(287): WC_ePayco->check_ePayco_response('')
+#5 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 /home/forge/lalabag.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#7 /home/forge/lalabag.com/wp-content/plugins/woocommerce/includes/class-wc-api.php(148): do_action('woocommerce_api...')
+#8 / en /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php en la línea 675
+
+2020-07-14T22:30:17+00:00 CRITICAL Uncaught Error: Call to a member function get_status() on null in /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php:675
+Stack trace:
+#0 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(287): WC_ePayco->ePayco_successful_request(NULL)
+#1 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/forge/lalabag.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php(619): do_action('ePayco_init', Array)
+#4 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(287): WC_ePayco->check_ePayco_response('')
+#5 /home/forge/lalabag.com/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 /home/forge/lalabag.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#7 /home/forge/lalabag.com/wp-content/plugins/woocommerce/includes/class-wc-api.php(148): do_action('woocommerce_api...')
+#8 / en /home/forge/lalabag.com/wp-content/plugins/Plugin_ePayco_WooCommerce-3.7.0/woocommerce-gateway-payco.php en la línea 675
+

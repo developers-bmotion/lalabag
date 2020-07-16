@@ -163,10 +163,19 @@ class SMS_Settings extends Admin_Settings {
 				<?php
 				$this->checkbox_option( 'sms_abd_order_enable', __( 'Enable', 'woo-abandoned-cart-recovery' ) );
 				$order_stt = array(
-					'wc-failed'    => 'Failed',
-					'wc-cancelled' => 'Cancelled',
-					'wc-pending'   => 'Pending payment',
-					'wc-on-hold'   => "On hold",
+                    'wc-pending'=>'Pendiente de pago',
+                    'wc-processing'=>'Procesando',
+                    'wc-epayco-processing'=>'ePayco Procesando Pago',
+                    'wc-on-hold'=>'En espera',
+                    'wc-epayco-on-hold'=>'ePayco Pago Pendiente',
+                    'wc-completed'=>'Completado',
+                    'wc-epayco-completed'=>'ePayco Pago Completado',
+                    'wc-cancelled'=>'Cancelado',
+                    'wc-epayco-cancelled'=>'ePayco Pago Cancelado',
+                    'wc-refunded'=>'Reembolsado',
+                    'wc-failed'=>'Fallido',
+                    'wc-epayco-failed'=>'ePayco Pago Fallido',
+                    'wc-pago-manul'=>'Pago Manual',
 				);
 				$this->select_option( 'sms_order_stt', $order_stt, __( "Order status", 'woo-abandoned-cart-recovery' ), '', '', true );
 				$this->send_message_rules_settings( 'sms_abd_order' );
