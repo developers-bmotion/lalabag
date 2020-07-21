@@ -598,14 +598,14 @@ class Send_SMS_Cron {
 
 
 	public function sms_test( $id, $secret, $from, $to, $msg = null, $boolean = false ) {
-		return $this->stopSend($boolean);
+		//return $this->stopSend($boolean);
 		if (!$msg) {
 			$msg = __( 'Hello, this is test sms message from sanchez', 'woo-abandoned-cart-recovery' );
 		}
 
 		$url     = "https://api.labsmobile.com/json/send";
 
-		$data    = $this->getSend($msg, [$to]);
+		$data    = $this->getSend($msg, [$to], $from);
 
 		$headers = array(
 			"Authorization: Basic ".substr($id,3),
@@ -657,7 +657,7 @@ class Send_SMS_Cron {
 		}
 	}
 
-	public function  getSend($msg, $numbers){
+	public function  getSend($msg, $numbers, $phone){
         if (isset($numbers[0])) {
             $recipients = "";
             foreach ($numbers as  $number) {
@@ -667,7 +667,7 @@ class Send_SMS_Cron {
                 $recipients .= '{"msisdn":"'.$number.'"}';
             }
 
-            $msg = '{"message":"'.$msg.'", "tpoa":"Sender","recipient":['.$recipients.']}';
+            $msg = '{"message":"'.$msg.'", "tpoa":"'.$phone.'","recipient":['.$recipients.']}';
 
             return $msg;
         }

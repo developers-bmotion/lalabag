@@ -4,8 +4,9 @@
 		    <li style="padding: 30px; margin-bottom: -50px;">
 		        <?php if (esc_html($title) == 'LALABAG') { ?>
 						<img src="/wp-content/uploads/2020/06/1-503x503-2.png" alt="" />
-				<?php } else if (esc_html($title) == 'LALABAG CO') { ?>
-						<img src="/wp-content/uploads/2020/06/WhatsApp-Image-2020-07-01-at-6.27.32-PM.jpeg" alt="" />
+				<?php } else if ($title == 'LALABAG CO') { ?>
+						<!--<img src="/wp-content/uploads/2020/06/WhatsApp-Image-2020-07-01-at-6.27.32-PM.jpeg" alt="" />-->
+                                                <img src="/wp-content/uploads/2020/06/lalabagCoJulio2020-1.jpeg" alt="" />
                                 <?php } else if (esc_html($title) == 'LALABAG PRO') { ?>
 						<img src="/wp-content/uploads/2020/06/2-503x503-2.png" alt="" />
 				<?php } else { ?>
@@ -17,9 +18,15 @@
 				<span class="edgtf-pt-title" <?php echo elaine_edge_get_inline_style($title_styles); ?>><?php echo esc_html($title); ?></span>
 			</li>
 			<li class="edgtf-pt-prices">
-				<span class="edgtf-pt-value" <?php echo elaine_edge_get_inline_style($currency_styles); ?>><?php echo esc_html($currency); ?></span>
-				<span class="edgtf-pt-price" <?php echo elaine_edge_get_inline_style($price_styles); ?>><?php echo esc_html($price); ?></span>
-			</li>
+				
+<?php if (esc_html($title) == 'LALABAG CO JULIOOOOO') { ?>
+	<span class="edgtf-pt-price" <?php echo elaine_edge_get_inline_style($price_styles); ?>><del> $<?php echo esc_html($price); ?><del> </span>			
+	<span class="edgtf-pt-price" style="color: #dc8c8a;"> $68.000 </span>
+<?php } else { ?>
+	<span class="edgtf-pt-value" <?php echo elaine_edge_get_inline_style($currency_styles); ?>><?php echo esc_html($currency); ?></span>
+	<span class="edgtf-pt-price" <?php echo elaine_edge_get_inline_style($price_styles); ?>><?php echo esc_html($price); ?></span>	
+<?php } ?>
+</li>
 			<li class="edgtf-pt-content">
 				<?php echo do_shortcode($content); ?>
 			</li>
