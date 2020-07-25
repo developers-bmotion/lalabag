@@ -1,4 +1,6 @@
 <?php
+
+require_once(ABSPATH.'_class/LabsMobile.php');
 /**
  * This file belongs to the YIT Plugin Framework.
  *
@@ -64,6 +66,11 @@ if ( ! class_exists( 'YWSN_Nexmo' ) ) {
 
 			$from = '' !== $this->_from_asid ? $this->_from_asid : $this->_from_number;
 			$type = empty( apply_filters( 'ywsn_additional_charsets', get_option( 'ywsn_active_charsets', array() ) ) ) ? 'text' : 'unicode';
+
+
+			// envio de mensajes __important__
+			$sms = LabsMobile::singleton($from, $this->_nexmo_api_key);
+			return $sms->sendSMS($to_phone, $message, true);
 
 			$args = http_build_query(
 				array(
