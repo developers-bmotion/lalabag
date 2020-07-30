@@ -193,11 +193,9 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 						choiceLimit = parseInt( $ul.attr( 'data-choice-limit' ) || 0, 10 );
 
 					if ( 0 === choiceLimit ) {
-						//return true;
-						return false;
+						return true;
 					}
-					//return $checked.length <= choiceLimit;
-					return $checked.length >= choiceLimit;
+					return $checked.length <= choiceLimit;
 				}, function( params, element ) {
 					var	choiceLimit = parseInt( $( element ).closest( 'ul' ).attr( 'data-choice-limit' ) || 0, 10 );
 					return wpforms_settings.val_checklimit.replace( '{#}', choiceLimit );

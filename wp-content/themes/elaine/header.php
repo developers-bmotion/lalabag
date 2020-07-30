@@ -12,6 +12,18 @@
 	do_action( 'elaine_edge_action_header_meta' );
 	
 	wp_head(); ?>
+
+	<!-- script para google analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174001988-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-174001988-1');
+	</script>
+
 </head>
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	<?php
